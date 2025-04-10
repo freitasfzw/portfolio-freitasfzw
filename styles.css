@@ -1,0 +1,682 @@
+@charset "UTF-8";
+
+    :root {
+        --principal: #8c00bb;
+        --secundaria: #570074;
+        --terciaria: #2a0037;
+        --quartearia: #ce39ff;
+        --preto: #000;
+        --branco: #fff;
+        --cinza-escuro: #212121;
+        --cinza-claro: #949494;
+        --backgroud: #070412;
+    }
+
+/*! ----------------------------------- */
+/*! Informações para Base da Pagina     */
+/*! ----------------------------------- */
+
+    .menu-placeholder {
+        height: 100px; /* mesmo valor da altura do menu fixo */
+    }
+
+    body,html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: linear-gradient(to bottom, #070412, #8c00bb, #070412);
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+/*! ------------------------------- */
+/*! Informações para Footer         */
+/*! ------------------------------- */
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 20px 0px;
+        background-color: var(--cinza-escuro);
+        color: var(--branco);
+    }
+    .footer .footer1 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+    }
+
+    .footer .footer1 a {
+        color: var(--principal);
+        text-decoration: none;
+    }
+
+    .footer .footer1 a:hover {
+        color: var(--quartearia);
+        text-decoration-line: underline;
+        transition: all .50s ease;
+    }
+
+    .footer .footer1 span a {
+        color: var(--principal);
+    }
+
+
+/*! ------------------------------- */
+/*! Informações para Menu           */
+/*! ------------------------------- */
+
+
+.menu {
+    position: fixed;
+    top: 0; /* Alinha no topo da página */
+    left: 0;
+    margin: 0 auto;
+    width: 100%; /* Faz o menu ocupar toda a largura */
+    height: 110px; /* Mantém a altura definida */
+    z-index: 1000;
+    background-color:  var(--backgroud);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex; /* Garante alinhamento flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.menu .menu-barra {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    padding: 0; /* Remove padding que pode causar desalinhamento */
+    align-items: center;
+
+}
+
+.menu .menu-barra .menu-lista .menu-lista-a2 {
+    color: var(--branco);
+    display: inline-block;
+    padding: 0 20px 0 20px;
+    padding-bottom: 10px; /* Espaço entre o texto e a linha */
+    
+}
+
+.menu .menu-barra .menu-lista a {
+    display: flex;
+    text-decoration: none;
+    color: var(--branco);
+    position: relative; /* Necessário para o pseudo-elemento */
+    padding-bottom: 10px; /* Espaço entre o texto e a linha */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.menu .menu-barra .menu-lista a:hover {
+    color: var(--quartearia);
+    transition: all .50s ease;
+    transform: scale(1.2);
+    
+}
+
+.menu .menu-barra .menu-lista .menu-lista-a2::after {
+    content: ""; /* Cria a linha */
+    position: absolute;
+    left: 50%; /* Começa do meio */
+    bottom: 0; /* Fica abaixo do texto */
+    width: 0; /* Inicialmente sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: var(--quartearia); /* Cor da linha */
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.menu .menu-barra .menu-lista .menu-lista-a2:hover::after {
+    width: 80%; /* Expande ao passar o mouse */
+
+}
+
+.menu .menu-barra .menu-lista .menu-lista-a1::after {
+    content: ""; /* Cria a linha */
+    position: absolute;
+    left: 50%; /* Começa do meio */
+    bottom: 0; /* Fica abaixo do texto */
+    width: 0; /* Inicialmente sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: var(--quartearia); /* Cor da linha */
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.menu .menu-barra .menu-lista .menu-lista-a1:hover::after {
+width: 30%; /* Expande ao passar o mouse */
+}
+
+.menu .menu-barra .menu-lista a img {
+    transition: transform 0.3s ease-in-out;
+    max-width: 20%;
+    margin: 0 auto; /* Centraliza dentro do container */
+    display: block;
+    
+
+}
+
+/*! ------------------------------- */
+/*! Informações para Slogan        */
+/*! ------------------------------- */
+
+.slogan {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Mantém altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+    padding: 60px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slogan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("IMAGEM/chatgpt-removebg-preview.png") no-repeat center right;
+    background-size: 50%;
+    z-index: 0;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* Conteúdo da Slogan */
+.slogan .slogan-texto {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    z-index: 1;
+}
+
+.slogan .slogan-texto span {
+    display: block;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.slogan .slogan-texto p {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cinza-claro);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*! ---------- Responsividade ----------- */
+
+@media (max-width: 1024px) {
+    .slogan::before {
+        background-size: 60%;
+        background-position: center right;
+    }
+
+    .slogan .slogan-texto span {
+        font-size: 36px;
+    }
+
+    .slogan .slogan-texto p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .slogan::before {
+        background-size: 75%;
+        background-position: center right;
+    }
+
+    .slogan .slogan-texto span {
+        font-size: 30px;
+    }
+
+    .slogan .slogan-texto p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan .slogan-texto span {
+        font-size: 26px;
+    }
+
+    .slogan .slogan-texto p {
+        font-size: 18px;
+    }
+
+    .slogan::before {
+        display: none; /* Remove completamente o fundo decorativo */
+    }
+}
+
+
+/*! ----------------------------------- */
+/*! Informações para Freitas            */
+/*! ----------------------------------- */
+
+.freitas-subtexto {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.freitas-subtexto .freitas-texto {
+    text-align: center;
+}
+
+.freitas-subtexto .freitas-texto h1 {
+    font-size: 60px;
+    color: var(--branco);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.freitas-subtexto .freitas-texto h1:hover {
+    color: var(--quartearia);
+    transform: scale(1.2);
+}
+
+.freitas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--cinza-escuro);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.freitas .freitas-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: var(--branco);
+    width: 100%;
+    position: relative;
+}
+
+.freitas .freitas-conteudo img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.freitas .texto-sobre-imagem {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--branco);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.freitas-texto h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--quartearia);
+}
+
+.freitas-texto h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--branco);
+    margin: 10px 0;
+}
+
+.freitas-texto p {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.freitas-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.freitas-sociais a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    transition: transform 0.3s;
+}
+
+.freitas-sociais a img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    .freitas {
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 15px;
+    }
+
+    .freitas .freitas-conteudo {
+        gap: 15px;
+    }
+
+    .freitas .freitas-conteudo img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: none;
+    }
+
+    .freitas .texto-sobre-imagem {
+        font-size: 0.9rem;
+        top: 8px;
+        left: 8px;
+        padding: 5px 8px;
+    }
+
+    .freitas-texto h1 {
+        font-size: 1.8rem;
+    }
+
+    .freitas-texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .freitas-texto p {
+        font-size: 0.95rem;
+        padding: 0 5px;
+        line-height: 1.5;
+    }
+
+    .freitas-sociais {
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .freitas-sociais a img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/*! ----------------------------------- */
+/*! Informações para Portfólio          */
+/*! ----------------------------------- */
+
+.portfolio {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.portfolio-textos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-txt h1 {
+    font-size: 60px;
+    font-family: system-ui, sans-serif;
+    color: var(--branco);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-txt h1:hover {
+    color: var(--quartearia);
+    transform: scale(1.2);
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio .portfolio-list1,
+.portfolio .portfolio-list2,
+.portfolio .portfolio-list3 {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--cinza-escuro);
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-list1:hover,
+.portfolio-list2:hover,
+.portfolio-list3:hover {
+    transform: scale(1.05);
+}
+
+.portfolio img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.category {
+    color: var(--principal);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.category1 {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/*! -------- RESPONSIVIDADE -------- */
+
+@media (max-width: 768px) {
+    .portfolio-txt h1 {
+        font-size: 40px;
+    }
+
+    .portfolio .portfolio-list1,
+    .portfolio .portfolio-list2,
+    .portfolio .portfolio-list3 {
+        max-width: 100%;
+    }
+
+    .category {
+        font-size: 1.5rem;
+    }
+
+    .category1 {
+        font-size: 1rem;
+    }
+}
+
+
+/*! ----------------------------------- */
+/*! Informações para Codes (com responsividade) */
+/*! ----------------------------------- */
+
+.codes-subtxt {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.codes-subtxt .codes-subt {
+    text-align: center;
+}
+
+.codes-subtxt .codes-subt h1 {
+    font-size: 60px;
+    color: var(--branco);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.codes-subtxt .codes-subt h1:hover {
+    color: var(--quartearia);
+    transform: scale(1.2);
+}
+
+/* CODES */
+.codes {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.codes .codes-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 1280px;
+    background-color: var(--cinza-escuro);
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px var(--preto);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.codes .codes-texto {
+    text-align: center;
+    font-family: system-ui, sans-serif;
+}
+
+.codes-titulo {
+    font-size: 60px;
+    color: var(--principal);
+    margin-bottom: 20px;
+}
+
+/* Lista de habilidades */
+.codes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.codes-imagem-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.codes-imagem-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+    transition: transform 0.3s ease;
+}
+
+.codes-imagem-box img:hover {
+    transform: scale(1.2);
+}
+
+.texto-hover {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.codes-imagem-box:hover .texto-hover {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .codes-titulo {
+        font-size: 45px;
+    }
+    .texto-hover {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .codes-titulo {
+        font-size: 38px;
+    }
+
+    .codes-imagem-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .texto-hover {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .codes-subtxt .codes-subt h1 {
+        font-size: 38px;
+    }
+
+    .codes-titulo {
+        font-size: 30px;
+    }
+
+    .codes-imagem-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .texto-hover {
+        font-size: 13px;
+        bottom: -60px;
+    }
+}
+
