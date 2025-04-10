@@ -1,60 +1,59 @@
-🧠 Resumo do Projeto via ChatGPT - Portfólio Gustavo Freitas
-🎯 Objetivo
-Criar um portfólio pessoal totalmente responsivo, moderno e funcional, destacando habilidades e projetos na área de Front-End e UI/UX Design. A ideia é comunicar profissionalismo, criatividade e experiência com foco em design limpo, legível e impactante.
+# 🧠 Portfólio Pessoal – Gustavo Freitas
 
-📁 Seções do Site
-🏠 Menu Fixo
-Menu lateral fixo com efeito animado.
+🎯 **Objetivo**  
+Desenvolver um portfólio moderno, responsivo e funcional que apresente minhas habilidades como **Front-End Developer** e **UI/UX Designer**. O foco é entregar uma experiência visual limpa, impactante e profissional — conectando design e desenvolvimento de forma fluida.
 
-Adaptado para ocupar espaço corretamente sem sobrepor o conteúdo principal.
+---
 
-🎤 Slogan e Introdução
-Frase de impacto na página inicial.
+## 📁 Seções do Site
 
-Responsiva e centralizada em diferentes resoluções.
+### 🏠 Menu Fixo  
+- Menu lateral fixo com **efeito animado**.  
+- Adaptado para não sobrepor o conteúdo principal.
 
-👤 Sobre Mim
-Biografia detalhada com imagem e descrição pessoal.
+### 🎤 Slogan e Introdução  
+- Frase de impacto destacada na home.  
+- Centralizada e totalmente responsiva.
 
-Estilização refinada com sombras, bordas arredondadas e texto sobre imagem.
+### 👤 Sobre Mim  
+- Biografia detalhada com imagem e texto pessoal.  
+- Estilo com sombras, bordas suaves e texto sobre imagem.  
+- **Atualmente responsiva**, com redesenho planejado para versão mobile.
 
-Está responsiva, mas será redesenhada no mobile para melhor adaptação visual.
+### 📦 Portfólio  
+- Três projetos em destaque com imagem, título e descrição.  
+- Cards com **efeito de zoom e sombra**.  
+- Layout adaptado para telas menores.
 
-📦 Portfólio
-Três projetos destacados com imagem, título e descrição.
+### 🧩 Conhecimentos (Codes)  
+- Tecnologias dominadas exibidas com **ícones e texto interativo via hover**.  
+- Design moderno com cards centralizados.  
+- Responsivo com empilhamento no mobile.
 
-Cartões com efeito de zoom e sombreamento.
+### 📩 Contato  
+- Ícones para **Instagram**, **LinkedIn**, **GitHub** e **E-mail**.  
+- Estilização uniforme com hover animado.
 
-Totalmente responsivo com ajuste de layout em telas menores.
+---
 
-🧩 Conhecimentos (Codes)
-Exibição de tecnologias dominadas com imagens e textos interativos via hover.
+## 🎨 Design e Estilo
 
-Cards organizados com estilo moderno e centralização.
+- Cores centralizadas com uso de **variáveis CSS**.  
+- Fontes modernas e escaláveis.  
+- Uso de **gradientes**, **sombras**, **bordas suaves** e **hover animado**.  
+- Layout centralizado com limites para melhor legibilidade em telas grandes.
 
-Design responsivo com empilhamento das tecnologias no mobile.
+---
 
-📩 Contato
-Ícones de redes sociais (Instagram, LinkedIn, GitHub, E-mail) com links.
+## 📱 Responsividade
 
-Efeitos de hover e estilo visual padronizado.
+- Media queries aplicadas para tornar o layout fluido.  
+- Elementos reorganizados ou redimensionados para dispositivos móveis.  
+- Cards reestruturados de horizontal para empilhamento vertical.  
+- Ajuste fino de fontes e espaçamentos para melhor leitura no celular.
 
-🎨 Design e Estilo
-Uso de variáveis CSS para cores e consistência visual.
+---
 
-Fontes modernas e escaláveis.
-
-Gradientes, sombras e bordas suaves para realce de conteúdo.
-
-Hover animado em títulos e imagens.
-
-Layout centralizado com limites máximos para manter legibilidade em telas grandes.
-
-📱 Responsividade
-Media queries aplicadas para tornar o layout fluido.
-
-Elementos reorganizados ou redimensionados para celulares.
-
-Cards passam de horizontal para empilhamento vertical no mobile.
-
-Ajustes de fontes e espaçamentos para melhor leitura em dispositivos menores.
+🔗 **Autor:** [Gustavo Freitas](https://www.linkedin.com/in/gustavofreitascode/)  
+📧 seguidoresfreitas@gmail.com  
+🌐 Projeto em desenvolvimento — melhorias contínuas em design e código!
